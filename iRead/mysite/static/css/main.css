@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital@1&display=swap');
+
+
+
+.image-fluid{
+    background: url(../desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    box-shadow: 4px 4px 10px black;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    transition: width 1s;
+    font-family: 'Pangolin', cursive;
+}
+
+.image-fluid .image-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+
+.greater-container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Permanent Marker', cursive;
+    min-height: 90vh;
+
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    padding: 1% 10%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: fit-content;
+    width: 300px;
+    /* border: 1px solid; */
+    box-shadow:  4px 4px  10px rgb(87, 88, 90),  4px 4px  10px rgb(75, 78, 82);
+    text-align: center;
+    margin: 1%;
+    border-radius: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+    min-height: 350px;
+}
+
+
+
+.card img{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+}
+.text-center{
+    text-align: center;
+}
+
+
+
+/* Category page */
+    .jumbotron{
+        background-color: rgb(84, 139, 84);
+        width: 50%;
+        height: fit-content;
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 5px;
+        box-shadow: 4px 4px 10px rgb(137, 197, 137), 4px 4px 10px  rgb(137, 197, 137);
+        font-family: 'Pangolin', cursive;
+
+    }
+
+
+#threadlist{
+    margin: 1% 10%;
+    padding: 2% 5%;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 4px 4px 10px rgb(91, 109, 107), 4px 4px 10px  rgb(121, 151, 155);
+
+}
+.posts{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Anonymous Pro', monospace;
+
+}
+.posts .post{
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px black, 4px 4px 10px black;
+}
+
+.posts a{
+    color: black;
+    text-decoration: none;
+}
+
+.posts a:hover{
+    text-decoration: underline;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    padding: 0.5%;
+    flex-direction: column;
+    margin-top: 15px;
+    box-shadow:  4px 4px  10px rgb(87, 88, 90),  4px 4px  10px rgb(75, 78, 82);
+}
+
+.form-group input, .form-group textarea{
+    outline: none;
+    /* border: 2px solid black; */
+    width: 80%;
+    padding: 1%;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow:  inset 4px 4px  10px rgb(87, 88, 90),  4px 4px  10px rgb(75, 78, 82);
+    display: flex;
+    font-size: 19px;
+}
+
+/* thread page */
+.comment{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.comment .posts{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.comment .posts .post{
+    box-shadow: 4px 4px 10px black, 4px 4px 10px black;
+    border: none;
+}
+
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Ubuntu', monospace;
+    text-align: center;
+    background-color: rgb(26, 24, 24);
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow:  4px 4px 10px black;
+    opacity: 0.9;
+}

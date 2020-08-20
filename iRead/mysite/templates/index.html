@@ -1,0 +1,47 @@
+{% extends 'basic.html' %}
+    {% block userButtonNav %}
+    {{buttons|safe}}
+    {% endblock userButtonNav %}
+    {% block userButtonOverlay %}
+    {{buttons|safe}}
+    {% endblock userButtonOverlay %}
+{% load static %}
+{% block body %}
+<div class="image-fluid" id="image-fluid">
+    <div class="image-content">
+        <h1>Welcome to iRead</h1>
+        <h2>You can Read Stories and have Discussion about Computer Science of top programming Languages</h2>
+    </div>
+</div>
+<div class="greater-container">
+    <h1 class="large-text text-center cat-name">Choose Your Path: </h1>
+    <div class="container">
+        <div class="card">
+            <div class="card-img">
+                <img src="{% static 'story.jpg'%}" alt="">
+            </div>
+            <div class="heading">
+                <h2><a href="/stories">Stories</a></h2>
+            </div>
+            <div class="content">
+                A story or narrative is a connected series of events told through words (written or spoken), imagery
+                (still and moving), body language, performance, music, or any other form of communication.
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="{% static 'idiscuss.jpg'%}" alt="">
+            </div>
+            <div class="heading">
+                <h2><a href="/discussion">iDiscussions</a></h2>
+            </div>
+            <div class="content">
+            Its an online platform where you can discuss about any doubts in your computer science subjects. 
+            It has a variety of languages and you just need to signin to ask a question thankyou.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

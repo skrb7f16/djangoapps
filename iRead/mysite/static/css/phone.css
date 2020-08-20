@@ -1,0 +1,72 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .logo{
+    display: inline;
+
+}
+.navbar .navlist{
+    display: none;
+}
+
+.right-side{
+    display: none;
+    position: relative;
+}
+
+.right-side .btn{
+    font-size: 15px;
+}
+
+.burger{
+    display: inline;
+    height: fit-content;
+}
+
+.container{
+    flex-direction: column;
+    margin: auto;
+}
+.card{
+    max-width: 330px;
+
+}
+.card img{
+    width: 100%;
+}
+.jumbotron{
+    padding: 0 0;
+    width: 80vw;
+    margin: auto;
+}
+.jumbotron .head, .jumbotron .body{
+    width: 50vw;
+}
+#threadlist{
+    width: fit-content;
+}
+
+#threadlist .posts{
+    width: 100%;
+}
+#threadlist .posts .post{
+    width: 100%;
+}
+
+.form-group{
+    width: 80%;
+}
+.comment{
+    width: 80%;
+}
+
+
+.form-group input, .form-group textarea{
+    width: 80%;
+    box-shadow:  inset 2px 2px  5px rgb(87, 88, 90),  2px 2px  5px rgb(75, 78, 82);
+}

@@ -1,0 +1,28 @@
+{% extends 'basic.html' %}
+    {% block userButtonNav %}
+    {{buttons|safe}}
+    {% endblock userButtonNav %}
+    {% block userButtonOverlay %}
+    {{buttons|safe}}
+    {% endblock userButtonOverlay %}
+{% load static %}
+    {% block body %}
+    <div class="greater-container">
+        <h1 class="large-text text-center cat-name">Discussion Category</h1>
+        <div class="container">
+        {% for c in cat %}
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://source.unsplash.com/1600x900/?programming,{{c.catName}}" alt="">
+                </div>
+                <div class="heading">
+                    <h2><a href="/threadlist?cat=idiscuss&&type={{c.id}}">{{c.catName}}</a></h2>
+                </div>
+                <div class="content">
+                {{c.catDesc}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRead| login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 4px 4px 10px black,4px 4px 10px black;
+            padding: 10px;
+            height: 400px;
+            background-blend-mode: darken;
+            background-color: rgb(138, 150, 141);
+            border-radius: 50px;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+
+        input{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid;
+            margin-top: 10px;
+            background: none;
+
+        }
+        .btn{
+            width: fit-content;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+            background: none;
+
+        }
+        ::placeholder{
+            color: black;
+        }
+        @media only screen and (max-width:1000px){
+            .container{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Please Signup !</h1>
+        <form action="/signupUser" class="form" method="post">
+        {% csrf_token %}
+            <input type="text" name="username" required placeholder="Username">
+            <input type="password" name="password" required placeholder="Password">
+            <input type="email" name="email" required placeholder="Email">
+            <button class="btn">Signup</button>
+        </form>
+    </div>
+</body>
+</html>

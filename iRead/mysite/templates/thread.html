@@ -1,0 +1,49 @@
+{% extends 'basic.html' %}
+    {% block userButtonNav %}
+    {{buttons|safe}}
+    {% endblock userButtonNav %}
+    {% block userButtonOverlay %}
+    {{buttons|safe}}
+    {% endblock userButtonOverlay %}
+{% load static %}
+{% block body %}
+    <div class="  container jumbotron text-center">
+        <div class="head">
+            <h1 class="large-text">{{story.name}}</h1>
+            <h5><i>by {{story.author}}</i></h5>
+            <hr>
+        </div>
+        <div class="body">
+            <p>
+               {{story.head}}
+            </p>
+            <br>
+            <p>
+                {{story.body}}
+            </p>
+            <br>
+            <p>
+                {{story.conclusion}}
+            </p>
+        </div>
+    </div>
+
+    <form action="submitComment?type={{typeof}}&&category={{story.type.catName}}&&id={{story.id}}" class="form-group" method="post">
+    {% csrf_token %}
+        <h2>Comment </h2>
+        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Write Your reviews" required></textarea>
+        <button class="btn">Comment</button>
+    </form>
+
+    <section class="comment">
+        <h2>Comments</h2>
+        <ul class="posts">
+        {% for comment in comments  %}
+            <li class="post">
+                <h2><a href="user.html">{{comment.author}}</a></h2>
+                <p class="content">{{comment.content}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock body %}
